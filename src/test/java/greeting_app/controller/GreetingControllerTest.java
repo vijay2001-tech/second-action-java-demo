@@ -22,7 +22,7 @@ public class GreetingControllerTest {
 
     @Test
     void greetShouldReturnGreetingMessage() throws Exception {
-        when(greetingService.greet("Alice")).thenReturn("Hello, Alice!");
+        when(greetingService.greet("Alice")).thenReturn("Hello, Alice!!");
         mockMvc.perform(get("/greet").param("name", "Alice"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Hello, Alice!"));
