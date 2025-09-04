@@ -4,14 +4,14 @@ jobs:
   test_job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code from repo     # Getting the code from repo
-        uses: actions/checkout@v3    # this is predefined action to checkout code
-      - name: Set up JDK 21           # Setting up JDK 21 becyause our project is in Java 21
-        uses: actions/setup-java@v4  # this is predefined action to setup java jdk
+      - name: Get code from repo # Getting the code from repo
+        uses: actions/checkout@v3
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'    # We are using temurin distribution because it is free and open source and widely used
-          java-version: '21'         # Setting up java version to 21
-      - name: Build with Maven       # Building the project using maven to get dependencies
-        run: mvn clean install       # Running maven command to clean and install dependencies
-      - name: Run tests              # Running the tests which we have written
-        run: mvn test                # Running maven command to run tests
+          distribution: 'temurin'
+          java-version: '21'
+      - name: Build with Maven
+        run: mvn clean install
+      - name: Run tests
+        run: mvn test
