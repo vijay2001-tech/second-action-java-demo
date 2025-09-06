@@ -17,6 +17,7 @@ jobs:
         run: mvn test
 
   build_and_deploy:
+    needs: test_job1
     runs-on: ubuntu-latest
     steps:
       - name: Get code from repo
